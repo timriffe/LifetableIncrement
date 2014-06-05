@@ -1,0 +1,200 @@
+%%This is a very basic article template.
+%%There is just one section and two subsections.
+\documentclass{article}
+
+
+\usepackage{amsmath}
+\usepackage{caption}
+\usepackage{placeins}
+\usepackage{graphicx}
+\usepackage{natbib}
+\usepackage{setspace}
+\doublespacing
+\bibpunct{(}{)}{,}{a}{}{;} 
+\usepackage{url}
+% for the d in integrals
+\newcommand{\dd}{\; \mathrm{d}}
+% end preamble.
+
+\begin{document}
+
+\title{The force of mortality by life lived is the force of increment by life
+left in stationary populations}
+\author{Author Redacted}
+\maketitle
+
+\section*{Structured abstract}
+
+\subsection*{Background}
+The age distribution and remaining lifespan distribution are identical in
+stationary populations. The lifetable survival function is proportional to the
+age distribution in stationary populations.
+
+\subsection*{Objective}
+We provide an alernative interpretation of the lifetable when viewed by
+remaining years of life.
+
+\subsection*{Conclusions}
+The functions describing the mortality of birth cohorts over age are identical
+to the functions describing the growth of death cohorts as time to death decreases in stationary populations.
+\vspace{2cm}
+\section*{Relationship}
+
+Age can be defined as chronological (time since birth) or thanatological (time
+until death). In a stationary population, decrement over
+chronological age, as described by the lifetable, is
+identical to increment over thanatological age.
+
+\section*{Proof}
+
+Chronological age structure equals thanatological age structure in a stationary
+population \citep{brouard1989mouvements,vaupel2009life}:
+
+\begin{equation}
+\label{eq:vaupel}
+c(a) = g(a) \quad\quad \text{,}
+\end{equation}
+where $c(a)$ is the stable chronological age structure expressed as a
+proportion, and $g(a)$ is proportion of the population with $a$ remaining years
+of life. Using $a$ to index chronological age and $y$ to index
+thanatological age, the amount of time left until death. Equation
+\eqref{eq:vaupel} is the same as:
+
+\begin{equation}
+\label{eq:equivalent}
+c(a) = c^\star (y) \quad \text{for}\quad a = y \quad\quad\text{,}
+\end{equation}
+where $c^\star (y)$ refers to the stable thanatological age
+structure. $c(a)$ is proportional to the survival
+function, $l(a)$, which means that $l(a)$ is proportional to some
+thanatological function, $l^\star (y)$, a stationary thanatological cumulative
+\textit{increment} function. To untangle how this is so, it helps to be
+explicit about what $l(a)$ represents. A birth cohort is a
+group of individuals that are born at the same point in time and experience attrition over age until extinction, as described by $l(a)$. $l(a)$ is also
+the sum of all deaths to the birth cohort at ages greater than $a$, and can be
+thought of as the de-accumulation of the stock of future deaths over age. 
+
+\begin{equation}
+l(a) = \int _{0}^\infty f(a+y) \dd y \quad \text{,}
+\end{equation}
+
+\noindent where $f(a)$ is the lifetable density function, often denoted by
+$d(a)$. $f(a)$ gives the probability that a member of the birth cohort born in year $t$
+will die in the year $t+a$. The deaths that will occur together in year
+$t+a$ comprise a \textit{death cohort}. In the next year $t+1$,
+$l(0)\cdot f(a-1)$ births increment to the $t+a$ death cohort in the stationary
+population. Death cohorts grow monotonically in this way, starting with a few
+members that will enjoy the maximum attainable lifespan, $ y = \omega$, and
+accumulating new members as time approaches $t_0+\omega$ and $y$ decreases
+toward 0:
+
+\begin{equation}
+l^\star (y) = \int _\omega^0 f(y) \dd y \quad \text{.}
+\end{equation}
+
+\noindent Extinction of the death cohort is simultaneous upon reaching
+thanatological age 0. The lifetable deaths distribution is under this
+perspective a distribution of the births to a death cohort, when read
+from the highest to the lowest ages. The rate at which new births accumulate to
+death cohorts over thanatological age, $\mu^\star (y)$ is given by
+\begin{align}
+\mu ^\star (y) &= \frac{-l^{\star^\prime} (y)}{l^\star (y)} \quad \text{,}
+               \intertext{and since $l(a) = l^\star{a}$:}
+               &= \frac{-l^\prime (y)}{l(y)} \notag\\
+               &= \mu (y)
+\end{align}
+
+The rate of birth accumulation into death cohorts over thanatological age is
+equal to the rate of death attrition of birth cohorts over chronological age in
+stationary populations. The stock of deaths in the future for
+chronological age $a$, $l(a)$, is symmetrically a description of births in the
+past when structured by thanatological age, $l^\star(y)$. The remaining
+lifetable columns are subject to similar reinterpretations when viewed under
+thanatological age.
+
+\section*{History and related results}
+
+The term ``thanatological age'' has not previously appeared in the
+literature, and was coined by Ken Wachter sometime prior to 2001. Thanatos was
+the Greek god of death, which is used as the reference point for age under this
+perspective. Explicit decompositions of chronological
+age groups into remaining lifespan classes is to our knowledge only found in
+\citet{brouard1986structure}, who redistributed
+population pyramids by remaining years of life, and
+\citet{miller2001increasing}, who examined medicare expenditure as a function of time until death using the
+same lifetable identities. Equivalence of chronological and
+thanatological age structures in stationarity, also known as Carey's equality,
+is proven by \citet{brouard1989mouvements} and again in
+ \citet{vaupel2009life}, which added detail to the more summary result reported
+ in \citet{goldstein2009life}, that mean (or total) remaining lifespan is equal to mean (or total) life lived in the stationary population.
+These latter two papers and \citet{goldstein2012historical} describe more of the
+lineage of result presented here. 
+
+The estimation of remaining lifespan has motivated demography since
+the invention of the lifetable, but this notion is typically dealt with as a
+mean (expectancy). Age-specific remaining lifespan distributions are not often
+used to explicitly decompose demographic quantities, such as population counts. Using
+the above identities, one may estimate the total population with $y$
+remaining years of life, $P(y)$ directly
+\begin{equation}
+\label{eq:getpy}
+P(y) = \int _0 ^\infty P(a)\mu(a+y)\frac{l(a+y)}{l(a)} \dd a \quad \text{,}
+\end{equation}
+\noindent and so approximate a population's thanatological age structure
+according to some mortality assumptions. This result differs from the more common approach
+of summing the population within age classes bounded by some values interpolated
+along the remaining life expectancy function (e.g.
+\citet{sanderson2005average,sanderson2007new,sanderson2010remeasuring}, who
+follow the line of \citet{hersch1944demographie} and \citet{ryder1975notes}).
+
+In the present case of a stationary population, one decomposes back to birth
+cohorts in much the same way as is evident from \eqref{eq:getpy}. The
+probability that a member of death cohort $y'$ was born $a'$ years ago is equal to the probability that a member of birth cohort $a$ will die $y$ years in the future when $a = y'$ and $y = a'$.
+
+\begin{align}
+f(y | a) &= f(a' | y') \quad \text{for } a = y' \;\text{, } y = a'\\
+&= \mu (a+y)\frac{l(a+y)}{l(a)}\\
+&= \mu^\star (a'+y')\frac{l^\star(a'+y')}{l^\star(y')} \label{eq:redundant}
+\end{align}
+
+Equation \eqref{eq:redundant} seems redundant, but is less obvious when put into
+words: The probability of dying $y$ years in the future given survival to chronological age
+$a$ is the probability of surviving to chronological age $a+y$ given survival to
+age $a$ times the force of mortality at age $a+y$, $\mu(a+y)$. Viewed thanatologically, the
+probability of having been born $a'$ years in the past given that one has $y'$
+remaining years of life is equal to the probability that someone in the
+$y'$ death cohort was born more than $a'$ years ago given that they have already
+been born times the force of increment at thanatological age $a'+y'$, $\mu
+^\star (a'+y')$.
+
+Similarly, taking $f(y|a)$ as the conditional distribution of remaining
+lifespans, one may calculate the variance of age-specific remaining life
+spans (thanatological age), where $e(a)$ is remaining life expectancy at age
+$a$:
+\begin{align}
+e(a) =& \frac{\int _{y=0} ^\infty l(a+y) \dd y}{l(a)}
+\intertext{The variance of $y$ given survival to age $a$ is}
+\sigma ^2 (y|a) =& \int _{y=0}^\infty \left( e(a) - y\right)^2 f(y|a) \dd y
+\quad \text{,}
+\end{align}
+\noindent and this function will have some non-monotonic pattern over age
+(in human populations) that remains to be explored. In the reliability
+literature, $\sigma ^2(y|a)$ is called the variance residual life function
+(VRLF), and its properties have been described for various common distributions
+\citep[see for example][]{gupta2006variance}.
+
+\section*{Applications}
+Thanatological age structure can be applied to stable populations (subject to a
+growth rate, $r$), though we leave the description of a thanatological
+renewal model for future work. Thanatological age equates individuals that share
+a common terminal state rather than a common origin state. Here this is
+the absorbing state of death, but the method generalizes to any terminal state
+or lifecourse transition that can be modeled using lifetable techniques. Potential area
+applications that may gain insights using such remaining-time methods
+include morbidity, disability, late-life savings and investment behavior, or perhaps time to birth, menopause, retirement, or graduation.
+
+\bibliographystyle{plainnat}
+  \bibliography{bibliography}   % Use the BibTeX file ``References.bib''.
+
+
+\end{document}

@@ -1,0 +1,13 @@
+#TeXlipse project settings
+#Mon May 05 10:15:32 PDT 2014
+builderNum=2
+outputDir=
+makeIndSty=
+bibrefDir=
+outputFormat=pdf
+tempDir=tmp
+mainTexFile=LifetableIncrement.tex
+outputFile=LifetableIncrement.pdf
+langSpell=en
+markDer=true
+srcDir=
