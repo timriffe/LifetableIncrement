@@ -1,13 +1,14 @@
 #TeXlipse project settings
-#Mon May 05 10:15:32 PDT 2014
+#Sun Feb 08 17:46:16 PST 2015
+markTmpDer=true
 builderNum=2
 outputDir=
 makeIndSty=
 bibrefDir=
 outputFormat=pdf
 tempDir=tmp
-mainTexFile=LifetableIncrement.tex
-outputFile=LifetableIncrement.pdf
+mainTexFile=ReplyReviewers.tex
+outputFile=ReplyReviewers.pdf
 langSpell=en
 markDer=true
 srcDir=
