@@ -17,7 +17,7 @@
 Special Collection ``Formal Relationships'' edited by Joshua R. Goldstein and James W.
 Vaupel}}
 \fancyfoot[R]{\footnotesize{\bfseries{page \thepage}}}
-\fancyfoot[L]{\footnotesize\bfseries{Submission \#2518 for review}}
+\fancyfoot[L]{\footnotesize\bfseries{Submission \#2518, revised}}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 %\setlength\headheight{117.89105pt}
@@ -65,25 +65,30 @@ to the functions describing the growth of death cohorts as time to death decreas
 \vspace{2cm}
 \section*{Relationship}
 
-Age can be defined as chronological (time since birth) or thanatological (time
-until death). In a stationary population, decrement over
+Age can be defined as chronological, $a$ (time since birth), or thanatological,
+$y$ (time until death). In a stationary population, decrement over
 chronological age, as described by the lifetable, is
-identical to increment over thanatological age.
+identical to increment over thanatological age. Define the chronological force
+of mortality, $\mu(a)$, and the thanatological force of increment,
+$\mu^\star(y)$. We have:
+\begin{equation}
+\mu(a) = \mu^\star(y)\quad\quad\text{for~}a=y\quad \text{.}
+\end{equation}
 
 \section*{Proof}
 
 Chronological age structure equals thanatological age structure in a stationary
-population \citep{brouard1989mouvements,vaupel2009life}:
+population \citep{brouard1989mouvements,vaupel2009life,rao2014generalization}:
 
 \begin{equation}
 \label{eq:vaupel}
 c(a) = g(a) \quad\quad \text{,}
 \end{equation}
 where $c(a)$ is the stable chronological age structure expressed as a
-proportion, and $g(a)$ is proportion of the population with $a$ remaining years
-of life. Using $a$ to index chronological age and $y$ to index
-thanatological age, the amount of time left until death. Equation
-\eqref{eq:vaupel} is the same as:
+proportion, and $g(a)$ is the proportion of the population with $a$ remaining
+years of life. Using $a$ to index chronological age and $y$ to index
+thanatological age (time left until death), equation \eqref{eq:vaupel} is the
+same as:
 
 \begin{equation}
 \label{eq:equivalent}
@@ -91,7 +96,7 @@ c(a) = c^\star (y) \quad \text{for}\quad a = y \quad\quad\text{,}
 \end{equation}
 where $c^\star (y)$ refers to the stable thanatological age
 structure. $c(a)$ is proportional to the survival
-function, $l(a)$, which means that $l(a)$ is proportional to some
+function, $l(a)$, which means that $c^\star(y)$ is proportional to some
 thanatological function, $l^\star (y)$, a stationary thanatological cumulative
 \textit{increment} function. To untangle how this is so, it helps to be
 explicit about what $l(a)$ represents. A birth cohort is a
@@ -100,7 +105,7 @@ the sum of all deaths to the birth cohort at ages greater than $a$, and can be
 thought of as the de-accumulation of the stock of future deaths over age. 
 
 \begin{equation}
-l(a) = \int _{0}^\infty f(a+y) \dd y \quad \text{,}
+l(a) = \int _{0}^\omega f(a+t) \dd t \quad \text{,}
 \end{equation}
 
 \noindent where $f(a)$ is the lifetable density function, often denoted by
@@ -110,11 +115,11 @@ $t+a$ comprise a \textit{death cohort}. In the next year $t+1$,
 $l(0)\cdot f(a-1)$ births increment to the $t+a$ death cohort in the stationary
 population. Death cohorts grow monotonically in this way, starting with a few
 members that will enjoy the maximum attainable lifespan, $ y = \omega$, and
-accumulating new members as time approaches $t_0+\omega$ and $y$ decreases
+accumulating new members as time approaches $t+\omega$ and $y$ decreases
 toward 0:
 
 \begin{equation}
-l^\star (y) = \int _\omega^0 f(y) \dd y \quad \text{.}
+l^\star (y) = \int _\omega^y f(t) \dd t \quad \text{.}
 \end{equation}
 
 \noindent Extinction of the death cohort is simultaneous upon reaching
@@ -124,7 +129,7 @@ from the highest to the lowest ages. The rate at which new births accumulate to
 death cohorts over thanatological age, $\mu^\star (y)$ is given by
 \begin{align}
 \mu ^\star (y) &= \frac{-l^{\star^\prime} (y)}{l^\star (y)} \quad \text{,}
-               \intertext{and since $l(a) = l^\star{a}$:}
+               \intertext{and since $l(a) = l^\star(a)$:}
                &= \frac{-l^\prime (y)}{l(y)} \notag\\
                &= \mu (y)
 \end{align}
@@ -135,7 +140,9 @@ stationary populations. The stock of deaths in the future for
 chronological age $a$, $l(a)$, is symmetrically a description of births in the
 past when structured by thanatological age, $l^\star(y)$. The remaining
 lifetable columns are subject to similar reinterpretations when viewed under
-thanatological age.
+thanatological age. The main contribution of this relationship is to point out
+the symmery of chronological decrement and thanatological renewal processes in
+the case of stationary populations.
 
 \section*{History and related results}
 
@@ -149,11 +156,12 @@ population pyramids by remaining years of life, and
 \citet{miller2001increasing}, who examined medicare expenditure as a function of time until death using the
 same lifetable identities. Equivalence of chronological and
 thanatological age structures in stationarity, also known as Carey's equality,
-is proven by \citet{brouard1989mouvements} and again in
- \citet{vaupel2009life}, which added detail to the more summary result reported
- in \citet{goldstein2009life}, that mean (or total) remaining lifespan is equal to mean (or total) life lived in the stationary population.
+is proven by \citet{brouard1989mouvements}, again in
+ \citet{vaupel2009life},\footnote{\citet{vaupel2009life} added detail to the
+ more summary result reported in \citet{goldstein2009life}, which showed that
+ the mean (or total) remaining lifespan is equal to mean (or total) life lived in the stationary population.} and in more detail by \citet{rao2014generalization}.
 These latter two papers and \citet{goldstein2012historical} describe more of the
-lineage of result presented here. 
+lineage of the result presented here. 
 
 The estimation of remaining lifespan has motivated demography since
 the invention of the lifetable, but this notion is typically dealt with as a
@@ -208,15 +216,39 @@ literature, $\sigma ^2(y|a)$ is called the variance residual life function
 (VRLF), and its properties have been described for various common distributions
 \citep[see for example][]{gupta2006variance}.
 
+The thanatological age perspective only offers the kind of profile symmetry
+presented in this paper for the theoretical case of stationary populations. For
+changing populations, the chronological and thanatological age perspectives
+typically offer different profiles of the same phenomena, due to changes in
+lifespan distributions and fluctuations in the birth flow, and therefore offer
+complementary information on population structure.
+
 \section*{Applications}
 Thanatological age structure can be applied to stable populations (subject to a
 growth rate, $r$), though we leave the description of a thanatological
 renewal model for future work. Thanatological age equates individuals that share
-a common terminal state rather than a common origin state. Here this is
-the absorbing state of death, but the method generalizes to any terminal state
+a common terminal state rather than a common origin state. In the present
+relationship, this is the absorbing state of death, but the method generalizes to any terminal state
 or lifecourse transition that can be modeled using lifetable techniques. Potential area
 applications that may gain insights using such remaining-time methods
-include morbidity, disability, late-life savings and investment behavior, or perhaps time to birth, menopause, retirement, or graduation.
+include morbidity, disability, late-life savings and investment behavior, or
+perhaps time to birth, menopause, retirement, or graduation. Glacial or open
+ice pack, old growth forest, and prison populations are other examples of
+aggregates for which remaining time structure is inherently of equal or greater
+interest than time passed. Populations of fixed or controlled size, or where
+entries are largely a function of exits are also prime candidates for analysis under some
+analogy to thanatological age. Examples of such populations include professional
+athletes in leagues, tenured professors, company directors, vehicle fleets.
+
+As a specific example, the question of morbidity compression has often been
+posed as a matter of comparing age of onset with remaining life expectancy
+\citep[e.g., ][]{fries2002aging,fries2003measuring}.\footnote{In the health
+literature, one often sees $e(65)$ compared with average disability levels above age 65.} In
+retrospect (within death cohorts), one can analytically separate between changes
+in lifespan and changes in morbidity as a function of time until death. Cross-tabulations of morbidity by chronological and thanatological age for two birth cohorts would allow the
+researcher to estimate changes in the morbidity profile over time free from
+distortion due to changes in the lifespan distribution, and so directly settle
+the question of morbidity compression.
 
 \bibliographystyle{plainnat}
   \bibliography{bibliography}   % Use the BibTeX file ``References.bib''.
