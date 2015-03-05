@@ -1,0 +1,93 @@
+\documentclass{article}
+
+\usepackage{amsmath}
+\usepackage{natbib}
+\bibpunct{(}{)}{,}{a}{}{;} 
+\newcommand{\dd}{\; \mathrm{d}}
+\usepackage{url}
+
+
+\begin{document}
+\title{Second reply to reviewers of submission 2518: ``The force of mortality by
+life lived is the force of increment by life left in stationary populations''}
+\author{Author Redacted}
+\maketitle
+
+My thanks to the reviewers for the corrections and constructive suggestions.
+Reviewer A found an error that owes to my own misunderstanding of integrals,
+which until now I've naively understood as perfectly analogous to discrete sums.
+In other words, the old equation (5) works when you draw it on paper, but now I
+understand why it does not work with calculus notation. Reviewer A also
+provided a solution that saves the argument, and for which I am grateful.
+
+I've only made yet another innocuous change to both my own equation (4) and
+reviewer A's suggestion for equation (5):
+
+Equation 4 Was:
+\begin{equation}
+\label{eq:la}
+l(a) = \int _{0}^{\omega} f(a+t) \dd t \quad \text{,}
+\end{equation}
+Now:
+\begin{equation}
+\label{eq:la}
+l(a) = \int _{0}^{\omega-a} f(a+t) \dd t \quad \text{.}
+\end{equation}
+This is just aesthetic, I suppose, but really it's the sum ($a+t$)
+that takes a maximum value of $\omega$. It's an innocuous change since higher
+values are all zero. I made this change because it helped me work through reviewer A's
+equation of $l^\star (y)$ with $l(a)$ when $a=y$, so I changed the reviewers
+alternative definition of $l^\star (y)$ to:
+\begin{equation}
+\label{eq:lstar}
+l^\star (y) = \int _{-(\omega - y)}^0 f(y-t) \dd t \quad \text{,}
+\end{equation}
+and everything works out to be the same by my reckoning.
+
+The text between equations 4 and 5 has also been substantially changed to
+better reflect the new formulation of $l^\star (y)$, and I hope it is clear.
+
+I also changed the indexing of the final result, and included ``for $a=y$'', as
+requested by the reviewer. You're right, it's easier to understand that way.
+-----------------------------
+
+Reviewer C looked for the old Brouard material. This is a link a a 1989 version of the Brouard paper with a version of Carey's inequality in it:
+
+\url{http://sauvy.ined.fr/brouard/enseignements/iford/mouvementetmodeles.pdf}
+
+The juicy part is section 4.2.2, ``Pyramide des ann\'{e}es a vivre'', which is
+couched in terms of the stationary population. I do think that he will have
+first written this down earlier, since he cites the relationship in
+\citet{brouard1986structure}, which is better known for having introduced the
+measure 'CAL'.
+
+Here's a link to the 1986 paper: 
+\url{http://www.persee.fr/web/revues/home/prescript/article/espos_0755-7809_1986_num_4_2_1120}
+
+The key sentence in the  1986 paper, which led me to discover the other more
+obscure source, is at the bottom of page 159, and continues into page 161 (pg
+160 is a figure page)- he states Careys equality in plain French and cites a 1985 manuscript ``Mouvements et mod\`{e}les de population''
+to back it up. I've never been able to locate the 1985 version, but it appears
+to be something he maintained over a series of years, and the
+first linked manuscript above appears to be from 1989 (so I cite it as such). Looking at the inside title page it says 1986. It appears to have been placed online in 2002.
+
+To settle the date more exactly, one would have to ask N. Brouard when he
+thought of it (or where he saw it). I imagine he went to Cameroon in 1985 with a
+notebook of concepts to demonstrate, and either he knew it beforehand, or it occurred to him there, but it wasn't, as far as I
+can tell, in a distributed print form until 1989. He apparently cited his 1985
+workshop materials, though I could be mistaken. I've not seen a hard copy.
+
+Regarding \citet{rao2014generalization}, the citation seems OK to me, but it was
+easy to miss since the bibliography is alphabetical by last name but printed
+starting with first name (Arni). I'll reformat as the journal requires.
+-----------------------------------
+Finally, I added a reference to \citet{chiang1984life}, who provides an
+alternative but equivalent expression of $\sigma^2(y|a)$ (in the History \&
+Related Results section), and I also fixed some minor typos here and there.
+
+Thanks for the careful reviewing.
+
+\bibliographystyle{plainnat}
+  \bibliography{bibliography} 
+
+\end{document}
