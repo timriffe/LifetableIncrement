@@ -1,40 +1,49 @@
 %%This is a very basic article template.
 %%There is just one section and two subsections.
-\documentclass{article}
-
+\documentclass[leqno]{article}
+% leqno is used for equations on the left.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%% To the editors: this part of the preamble was used for markup
+%%%%%%%%%% during the review process, but I comment it out now so you have
+%%%%%%%%%% an easier time of editing
 % header, footers for review
-\usepackage{fancyhdr}
-\pagestyle{fancy}
+%\usepackage{fancyhdr}
+%\pagestyle{fancy}
 
 %\chead{submitted as a relationship report to be included in the Special
 %Collection ``Formal Relationships'' edited by Joshua R. Goldstein and James W.
 %Vaupel}
 %\lfoot{Submission \#2518 for review}
 %\rfoot{}
-\fancyhf{}
-\fancyhead[C]{\footnotesize{submitted as a relationship report to be included in the
-Special Collection ``Formal Relationships'' edited by Joshua R. Goldstein and James W.
-Vaupel}}
-\fancyfoot[R]{\footnotesize{\bfseries{page \thepage}}}
-\fancyfoot[L]{\footnotesize\bfseries{Submission \#2518, revised}}
-\renewcommand{\headrulewidth}{0pt}
-\renewcommand{\footrulewidth}{0pt}
+%\fancyhf{}
+%\fancyhead[C]{\footnotesize{submitted as a relationship report to be included
+% in the Special Collection ``Formal Relationships'' edited by Joshua R. Goldstein and James W.
+%Vaupel}}
+%\fancyfoot[R]{\footnotesize{\bfseries{page \thepage}}}
+%\fancyfoot[L]{\footnotesize\bfseries{Submission \#2518, revised}}
+%\renewcommand{\headrulewidth}{0pt}
+%\renewcommand{\footrulewidth}{0pt}
 %\setlength\headheight{117.89105pt}
-\setcounter{page}{2}
-\pagestyle{fancy}
+%\setcounter{page}{2}
+%\pagestyle{fancy}
 
-\makeatletter
-\let\ps@plain\ps@fancy 
-\makeatother
+%\makeatletter
+%\let\ps@plain\ps@fancy 
+%\makeatother
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage{amsmath}
 \usepackage{caption}
 \usepackage{placeins}
 \usepackage{graphicx}
-\usepackage{natbib}
+\usepackage{natbib} % natbib called for bibtex, used with defaults. 
+                    % if formatting is eventually done using package arguments,
+                    % it'd be helpful for authors to know the combo of arguments
+                    % required to meet reference guidelines. Or maybe a style
+                    % could be written?
 \usepackage{setspace}
+\usepackage{authblk} % for affiliation
 \doublespacing
 \bibpunct{(}{)}{,}{a}{}{;} 
 \usepackage{url}
@@ -46,7 +55,8 @@ Vaupel}}
 
 \title{The force of mortality by life lived is the force of increment by life
 left in stationary populations}
-\author{Author Redacted}
+\author{Tim Riffe}
+\affil{Department of Demography, University of California, Berkeley}
 \maketitle
 \section*{Structured abstract}
 
@@ -157,14 +167,14 @@ over chronological age, $\mu (a)$ in stationary populations. The stock of deaths
 the future for chronological age $a$, $l(a)$, is symmetrically a description of births in the
 past when structured by thanatological age, $l^\star(y)$. The remaining
 lifetable columns are subject to similar reinterpretations when viewed under
-thanatological age. The main contribution of this relationship is to point out
-the symmetry of chronological decrement and thanatological renewal processes in
-the case of stationary populations.
+thanatological age. 
 
 \section*{History and related results}
 
-The term ``thanatological age'' has not previously appeared in the
-literature, and was coined by Ken Wachter sometime prior to 2001. Thanatos was
+The main contribution of this relationship is to point out
+the symmetry of chronological decrement and thanatological renewal processes in
+the case of stationary populations. The term ``thanatological age'' has not
+previously appeared in the literature, and was coined by Ken Wachter sometime prior to 2001. Thanatos was
 the Greek god of death, which is used as the reference point for age under this
 perspective. Explicit decompositions of chronological
 age groups into remaining lifespan classes is to our knowledge only found in
@@ -193,7 +203,7 @@ P(y) = \int _0 ^\infty P(a)\mu(a+y)\frac{l(a+y)}{l(a)} \dd a \quad \text{,}
 \noindent as \citet{brouard1986structure} did, and so approximate a population's
 thanatological age structure according to some mortality assumptions. This result differs from the more common approach
 of summing the population within age classes bounded by some values interpolated
-along the remaining life expectancy function (e.g.
+along the remaining life expectancy function (e.g.,
 \citet{sanderson2005average,sanderson2007new,sanderson2010remeasuring}, who
 follow the line of \citet{hersch1944demographie} and \citet{ryder1975notes}).
 
@@ -222,9 +232,9 @@ lifespans, one may calculate the variance of age-specific remaining life
 spans (thanatological age), where $e(a)$ is remaining life expectancy at age
 $a$:
 \begin{align}
-e(a) =& \frac{\int _{y=0} ^\infty l(a+y) \dd y}{l(a)}
+e(a) =& \frac{\int _{0} ^\infty l(a+y) \dd y}{l(a)}
 \intertext{The variance of $y$ given survival to age $a$ is}
-\sigma ^2 (y|a) =& \int _{y=0}^\infty \left( e(a) - y\right)^2 f(y|a) \dd y
+\sigma ^2 (y|a) =& \int _{0}^\infty \left( e(a) - y\right)^2 f(y|a) \dd y
 \quad \text{,}
 \end{align}
 \noindent and this function will have some non-monotonic pattern over age
@@ -266,6 +276,13 @@ in lifespan and changes in morbidity as a function of time until death. Cross-ta
 researcher to estimate changes in the morbidity profile over time free from
 distortion due to changes in the lifespan distribution, and so directly settle
 the question of morbidity compression.
+
+\section*{Acknowledgements}
+A big thank you to three anonymous reviewers for providing helpful 
+suggestions, comments, and corrections. This work was supported by the National Institute On
+Aging of the U.S. National Institutes of Health (NIH) under Award Numbers
+R01-AG011552 and R01-AG040245. The content is solely the responsibility of the
+author and does not necessarily represent the official views of the NIH.
 
 \bibliographystyle{plainnat}
   \bibliography{bibliography}   % Use the BibTeX file ``References.bib''.
