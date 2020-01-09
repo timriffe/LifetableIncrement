@@ -1,4 +1,4 @@
-LifetableIncrement
+The force of mortality by life lived is the force of increment by life left in stationary populations
 ==================
 This repository contains the laxtex file and some auxiliary R code for a paper titled "The force of mortality by life lived is the force of increment by life left in stationary populations", published 2015 in Demographic Research, url: [https://dx.doi.org/10.4054/DemRes.2015.32.29](https://dx.doi.org/10.4054/DemRes.2015.32.29)
 
