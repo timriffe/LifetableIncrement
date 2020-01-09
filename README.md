@@ -3,6 +3,7 @@ LifetableIncrement
 This repository contains the laxtex file and some auxiliary R code for a paper titled "The force of mortality by life lived is the force of increment by life left in stationary populations", published 2015 in Demographic Research, url: [https://dx.doi.org/10.4054/DemRes.2015.32.29](https://dx.doi.org/10.4054/DemRes.2015.32.29)
 
 Here's a passable bibtex citation:
+```
 @article{riffe2015force,
   title={The force of mortality by life lived is the force of increment by life left in stationary populations},
   author={Riffe, Tim},
@@ -13,5 +14,6 @@ Here's a passable bibtex citation:
   publisher={NIH Public Access},
   doi={10.4054/DemRes.2015.32.29}
 }
+```
 
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">The force of mortality by life lived is the force of increment by life left in stationary populations</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://sites.google.com/site/timriffepersonal/" property="cc:attributionName" rel="cc:attributionURL">Timothy L. M. Riffe</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
